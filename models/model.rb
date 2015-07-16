@@ -1,6 +1,9 @@
 require 'colorize'
 include Math
 class Calculator
+  
+  
+  
 def factorial(num)
   x = 1
   while  num > 0
@@ -44,8 +47,11 @@ end
 
 def sine(deg)
   rad = (deg * 3.14159) / 180
-  return sin(rad)
+  rad = ((sin(rad) *1000.0).round / 1000.0)
+  return rad 
 end
+  
+  
 
 def compute(calc)
   if calc.include? "**"
