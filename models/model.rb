@@ -1,25 +1,6 @@
 require 'colorize'
 include Math
-
-startscreen =  "
-                                   +--------------------------------------------------+
-                                   |           "+"   Fake I - 84 Calculator   ".green+"           |
-+----------------------------+     +--------------------------------------------------+      +----------------------------+ 
-|      Basic Operations      |                                                               |     Special Operations     |
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-|  *  |  Multiplication      |  /  |  Division            |     | sin | sin function (sinAA) | cos | cosine function      |
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-|  +  |  Addition            |  -  |  Subtraction         |     |quad | Quadratic formula    |pyth | Pythagorean Theorem  |
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-|  ** |  Power (exponent)    |  %  |  Mod                 |     |"+" ===>       [Number 1] [operation] [Number2]       <=== ".yellow+" |
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-
-
-===========================================================
-[         Input your calculations and press ENTER         ]
-===========================================================
->> Calculation?"+" [Type in 'end' and press ENTER to end]".red
-
+class Calculator
 def factorial(num)
   x = 1
   while  num > 0
@@ -89,22 +70,4 @@ def compute(calc)
     return sine(calc[3..-1].to_f)
   end
 end
-
-def startoff(calculation)
-  if calculation != "end"
-    ans = compute(calculation)
-    puts ">> #{ans.to_s}".green
-    puts ">> Next calculation?"+" [Type in 'end' and press ENTER to end]".red
-    another = gets.chomp
-    startoff(another)
-  else puts "
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-+----------------------------+----------------------------+     +----------------------------+----------------------------+
-"
-  end
 end
-
-system "clear"
-puts startscreen
-calc = gets.chomp
-startoff(calc)
