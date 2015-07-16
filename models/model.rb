@@ -51,6 +51,17 @@ def sine(deg)
   return rad 
 end
   
+def cosi(deg)
+  rad = (deg * 3.14159) / 180
+  rad = ((cos(rad) *1000.0).round / 1000.0)
+  return rad 
+end
+
+def tang(deg)
+  rad = (deg * 3.14159) / 180
+  rad = ((tan(rad) *1000.0).round / 1000.0)
+  return rad 
+end
   
 
 def compute(calc)
@@ -74,6 +85,10 @@ def compute(calc)
     return pyth
   elsif calc.include? "sin"
     return sine(calc[3..-1].to_f)
+  elsif calc.include? "cos"
+    return cosi(calc[3..-1].to_f)
+  elsif calc.include? "tan"
+    return tang(calc[3..-1].to_f)
   end
 end
 end
