@@ -1,0 +1,13 @@
+button {
+    background-color: white; 
+    padding: 2px 4px;
+    font: 13px sans-serif;
+    text-decoration: none;
+    border: 1px solid blue;
+    border-color: #aaa #444 #444 #aaa;
+    color: purple
+}
+
+body {
+  background-color: maroon;
+}
