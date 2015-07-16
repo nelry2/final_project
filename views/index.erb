@@ -4,26 +4,36 @@
   <meta charset="UTF-8">
   <title>title</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
- </head>
+ <script>
+   function showButtonPress(pressed){
+     var firstButton = 
+     document.getElementById("textBox").value;
+     var fullText = firstButton + pressed;
+   document.getElementById("textBox").value = fullText;
+   }
+   </script>
+  </head>
  <body>
    <div id="sampleDiv" style="width: 100px; background-color: Gray;">
      <form>
-     <button id="1" type="button" class="btn btn-primary btn-lg" value=1>1</button>
-     <button id="2" type="button" class="btn btn-primary btn-lg" value=2>2</button>
-     <button id="3" type="button" class="btn btn-primary btn-lg" value=3>3</button>
-     <button id="+" type="button" class="btn btn-primary btn-lg" value="+">+</button><br><br>
-     <button id="4" type="button" class="btn btn-primary btn-lg" value=4>4</button>
-     <button id="5" type="button" class="btn btn-primary btn-lg" value=5>5</button>
-     <button id="6" type="button" class="btn btn-primary btn-lg" value=6>6</button>
-     <button id="-" type="button" class="btn btn-primary btn-lg" value="-">-</button><br><br>
-     <button id="7" type="button" class="btn btn-primary btn-lg" value=7>7</button>
-     <button id="8" type="button" class="btn btn-primary btn-lg" value=8>8</button>
-     <button id="9" type="button" class="btn btn-primary btn-lg" value=9>9</button>
-     <button id="*" type="button" class="btn btn-primary btn-lg" value="*">*</button><br><br>
-     <button id="0" type="button" class="btn btn-primary btn-lg" value=0>0</button>
-     <button id="/" type="button" class="btn btn-primary btn-lg" value="/">/</button>
-     <button id="%" type="button" class="btn btn-primary btn-lg" value="%">%</button>
-     <button id="root" type="button" class="btn btn-primary btn-lg" value=&radic;>&radic;</button>
+     <button id="1" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=1>1</button>
+     <button id="2" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=2>2</button>
+     <button id="3" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=3>3</button>      <button id="+" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="+">+</button><br><br> 
+     <button id="4" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=4>4</button>
+     <button id="5" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=5>5</button>
+     <button id="6" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=6>6</button>
+     <button id="-" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="-">-</button><br><br>
+     <button id="7" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=7>7</button>
+     <button id="8" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=8>8</button>
+     <button id="9" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=9>9</button>
+     <button id="*" type="button" onclick="showButtonPress(this.innerHTML)" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="*">*</button><br><br>
+     <button id="0" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=0>0</button>
+     <button id="/" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="/">/</button>
+     <button id="%" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="%">%</button>
+     <button id="root" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=&radic;>&radic;</button>
+            <button id="equal" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value= "=">Equal =</button>
+
+    <input type=text id="textBox">
      </form>
   </div>
   <button onclick="sampleDiv.style.zoom='300%'">Zoom 300%</button>
