@@ -63,6 +63,18 @@ def tang(deg)
   return rad 
 end
   
+def logarithm
+  puts "what number do you want the log of?"
+  x = gets.to_f
+  puts "what base do you want, enter 0 for natural log?"
+  base = gets.to_f
+  if base == 0.0
+    return Math.log(x)
+  else 
+    base = base.to_f
+    return Math.log(x, base)
+  end
+end
 
 def compute(calc)
   if calc.include? "**"
@@ -89,6 +101,8 @@ def compute(calc)
     return cosi(calc[3..-1].to_f)
   elsif calc.include? "tan"
     return tang(calc[3..-1].to_f)
+  elsif calc.include? "log"
+    return logarithm
   end
 end
 end
