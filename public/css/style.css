@@ -1,10 +1,10 @@
 button {
     background-color: white; 
     padding: 2px 4px;
-    font: 13px sans-serif;
-    text-decoration: none;
-    border: 1px solid blue;
-    border-color: #aaa #444 #444 #aaa;
+    font: 18px sans-serif;
+    text-decoration: underline;
+    border: 1px solid magenta;
+    border-color: pink;
     color: purple
 }
 
@@ -12,3 +12,6 @@ body {
   background-color: maroon;
 }
 
+title-section {
+  text-align: center;
+}
