@@ -2,7 +2,9 @@ require 'colorize'
 include Math
 class Calculator
   
-  
+  def initialize(problem)
+    @problem = problem
+  end
   
 def factorial(num)
   x = 1
@@ -103,7 +105,7 @@ def determinant
   end
 end  
 
-def compute(calc)
+  def compute(calc)
   if calc.include? "**"
     return (calc[0..calc.index("**")].to_f)**(calc[calc.index("**")+2..-1].to_f)
   elsif calc.include? "%"
