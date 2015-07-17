@@ -15,10 +15,11 @@
   </head>
  <body>
    <div id="sampleDiv" style="width: 100px; background-color: Gray;">
-     <form>
+     <form method = "POST" action = "/answer">
      <button id="1" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=1>1</button>
      <button id="2" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=2>2</button>
-     <button id="3" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=3>3</button>      <button id="+" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="+">+</button><br><br> 
+     <button id="3" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=3>3</button>      
+     <button id="+" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="+">+</button><br><br> 
      <button id="4" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=4>4</button>
      <button id="5" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=5>5</button>
      <button id="6" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=6>6</button>
@@ -31,9 +32,12 @@
      <button id="/" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="/">/</button>
      <button id="%" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="%">%</button>
      <button id="root" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value=&radic;>&radic;</button>
-            <button id="equal" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value= "=">Equal =</button>
+     <button id="sin" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="sin">sin</button>
+     <button id="cos" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="cos">cos</button>
+     <button id="tan" type="button" onclick="showButtonPress(this.innerHTML)" class="btn btn-primary btn-lg" value="tan">tan</button>
 
-    <input type=text id="textBox">
+<input type=text id="textBox" name="user_input">
+        <input id="equal" type="submit" class="btn btn-primary btn-lg" value= "=">
      </form>
   </div>
   <button onclick="sampleDiv.style.zoom='300%'">Zoom 300%</button>
