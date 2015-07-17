@@ -1,11 +1,6 @@
 require 'colorize'
 include Math
-class Calculator
-  
-  def initialize(problem)
-    @problem = problem
-  end
-  
+
 def factorial(num)
   x = 1
   while  num > 0
@@ -135,5 +130,4 @@ end
   elsif calc.include? "determinant"
   return determinant
   end
-end
 end
