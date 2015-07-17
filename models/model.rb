@@ -10,14 +10,7 @@ def factorial(num)
   return x
 end
 
-def quad
-  puts "|   Quadratic Formula   |".yellow
-  puts "What is A?"
-  a = gets.chomp.to_f
-  puts "What is B?"
-  b = gets.chomp.to_f
-  puts "What is C?"
-  c = gets.chomp.to_f
+def quad(a, b, c)
   ans1 = ((0-b)+((b**2)-(4*a*c))**0.5)/(2*a)
   ans2 = ((0-b)-((b**2)-(4*a*c))**0.5)/(2*a)
   return "The two roots of the equation #{a}x^2 + #{b}x + #{c} are\nx1 = #{ans1}\nx2 = #{ans2}:"
@@ -114,7 +107,7 @@ end
   elsif calc.include? "!"
     return factorial(calc[0..calc.index("!")].to_f)
   elsif calc.include? "quad"
-    return quad
+    return quad(calc[4..calc.index(" ")].to_f, calc[calc.index(" ")..calc.index(" ")].to_f, calc[calc.index(" ")..-1].to_f)
   elsif calc.include? "pyth"
     return pyth
   elsif calc.include? "sin"
