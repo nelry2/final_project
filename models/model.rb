@@ -60,17 +60,15 @@ def tang(deg)
   return rad 
 end
   
-def logarithm
-  puts "what number do you want the log of?"
-  x = gets.to_f
-  puts "what base do you want, enter 0 for natural log?"
-  base = gets.to_f
-  if base == 0.0
-    return Math.log(x)
-  else 
+def logarithm(x, base)
+  x = x.to_f
     base = base.to_f
     return Math.log(x, base)
-  end
+end
+
+def natural_logarithm(x)
+  x = x.to_f
+    return Math.log(x)
 end
   
 def determinant
@@ -125,8 +123,10 @@ end
     return cosi(calc[3..-1].to_f)
   elsif calc.include? "tan"
     return tang(calc[3..-1].to_f)
-  elsif calc.include? "log"
-    return logarithm
+  elsif calc.include? "ln"
+    return natural_logarithm(calc[2..-1].to_f)
+elsif calc.include? "log"
+    return logarithm(calc[3..calc.index(" ")].to_f, calc[calc.index(" ")..-1].to_f)
   elsif calc.include? "determinant"
   return determinant
   end
