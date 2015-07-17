@@ -107,7 +107,7 @@ end
   elsif calc.include? "!"
     return factorial(calc[0..calc.index("!")].to_f)
   elsif calc.include? "quad"
-    return quad(calc[4..calc.index(" ")].to_f, calc[calc.index(" ")..calc.index(" ")].to_f, calc[calc.index(" ")..-1].to_f)
+    return quad(calc[4..calc.index(" ")].to_f, calc[calc.index(" ")..calc.index(" ")+1].to_f, calc[calc.index(",")+1..-1].to_f)
   elsif calc.include? "pyth"
     return pyth
   elsif calc.include? "sin"
